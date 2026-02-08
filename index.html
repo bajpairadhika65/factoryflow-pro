@@ -42,7 +42,24 @@
 <link rel="stylesheet" href="/index.css">
 </head>
 <body>
-    <div id="root"></div>
-<script type="module" src="/index.tsx"></script>
+<div id="root"></div>
+
+<script type="module">
+import React from "react";
+import { createRoot } from "react-dom/client";
+
+function App() {
+  return React.createElement(
+    "h1",
+    { className: "text-3xl font-bold text-center mt-10" },
+    "FactoryFlow Pro is Working 🚀"
+  );
+}
+
+const root = createRoot(document.getElementById("root"));
+root.render(React.createElement(App));
+</script>
+
+</body><script type="module" src="/index.tsx"></script>
 </body>
 </html>
